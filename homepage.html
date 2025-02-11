@@ -11,7 +11,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #FFF8DC;
+            background-color: #FFFFFF;
         }
 
         header {
@@ -25,17 +25,18 @@
             background-color: #e74c3c;
             padding: 10px;
             text-align: center;
+            text-decoration: none;
         }
 
         nav a {
             color: white;
-            text-decoration: none;
+            text-decoration: none !important;
             margin: 0 15px;
             font-size: 16px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            text-decoration: none !important;
         }
 
         section {
@@ -78,7 +79,7 @@
             display: flex;
             justify-content: bottom;
             gap: 20px;
-            margin-top: 400px;
+            margin-top: 500px;
         }
 
         .button {
@@ -113,6 +114,32 @@
         .bright-red {
             background-color: #E74C3C;
         }
+ .table-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #c0392b;
+            color: black;
+        }
+        td{
+           color:black;
+   background-color:#F1F1F1;
+         }
+
 
         /* About */
         /* Optional: Styling the scrollbar */
@@ -161,13 +188,18 @@
             </a>
         </div>
     </div>
-	<div class="row" style="padding-top:4px; ">
+<div class="row" style="padding-top:4px; ">
     <div class="row text-center">
         <div class="col-md-12 typeHeading">
 <style>
 .center{
-	text-align: center;
-	color:red;
+text-align: center;
+color:red;
+}
+.image-center{
+ display: block;
+                    margin-left: auto;
+                    margin-right: auto;
 }</style>
             <h1 class="center">Learn About Donation</h1>
         </div>
@@ -175,12 +207,63 @@
         <div class="wow col-sm-6 rotateInDownRight text-center animated" data-wow-delay="es" data-wow-duration="1000ms"
             style="visibility: visible; animation-duration: 1000ms; animation-delay: 0ms; animation-name: rotateInDownRight;">
                        <picture>
-                <img src="https://eraktkosh.mohfw.gov.in/BLDAHIMS/bloodbank/transactions/assets/donationFact.jpg">
+                <img class="image-center" src="https://eraktkosh.mohfw.gov.in/BLDAHIMS/bloodbank/transactions/assets/donationFact.jpg">
 
        
     </picture>
                                   <br><br>
         </div>
+<div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Blood Type</th>
+                            <th>Can Donate To</th>
+                            <th>Can Receive From</th>
+                        </tr>
+                        <tr>
+                            <td>A+</td>
+                            <td>A+, AB+</td>
+                            <td>A+, A-, O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>A-</td>
+                            <td>A+, A-, AB+, AB-</td>
+                            <td>A-, O-</td>
+                        </tr>
+                        <tr>
+                            <td>B+</td>
+                            <td>B+, AB+</td>
+                            <td>B+, B-, O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>B-</td>
+                            <td>B+, B-, AB+, AB-</td>
+                            <td>B-, O-</td>
+                        </tr>
+                        <tr>
+                            <td>O+</td>
+                            <td>O+, A+, B+, AB+</td>
+                            <td>O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>O-</td>
+                            <td>All Blood Groups</td>
+                            <td>O-</td>
+                        </tr>
+                        <tr>
+                            <td>AB+</td>
+                            <td>AB+</td>
+                            <td>All Blood Groups</td>
+                        </tr>
+                        <tr>
+                            <td>AB-</td>
+                            <td>AB+, AB-</td>
+                            <td>AB-, A-, B-, O-</td>
+                        </tr>
+                    </table>
+                </div>
+   
+ 
 
                
     </div></div>
@@ -190,7 +273,7 @@
             <li>One donation can save up to three lives.</li>
             <li>Blood is essential for surgeries, accidents, and medical conditions.</li>
             <li>Every donation helps those in need of critical care.</li>
-	<li>The donation process typically takes less than 10 minutes. The procedure is safe, and only a small amount (about a pint) of blood is taken. Donors are monitored to ensure their safety throughout the process.</li>
+<li>The donation process typically takes less than 10 minutes. The procedure is safe, and only a small amount (about a pint) of blood is taken. Donors are monitored to ensure their safety throughout the process.</li>
         </ul>
     </section>
 </body>
