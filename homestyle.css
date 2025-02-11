@@ -1,0 +1,126 @@
+/* Body background with two images */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+    overflow-y: auto; /* Add a vertical scrollbar when the content exceeds the viewport height */
+    /* First background image (the bottom image) */
+    background-image: url('https://eraktkosh.mohfw.gov.in/BLDAHIMS/bloodbank/transactions/assets/webp/thankublooddonors.png');
+    background-size: 1600px; /* Size the image */
+    background-position: 0% 23%; /* Position the image (adjust as necessary) */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    
+    color: white;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8DC;
+}
+
+section h2 {
+    font-size: 3em;
+    color:#000000 ;
+}
+ul li {
+    font-family: 'Times New Roman', serif;  /* Change to any font you prefer */
+    color: #000000;  /* Sets color to a dark blue/gray */
+    font-size: 1.4em;  /* Optional: adjusts the font size of each list item */
+    margin-bottom: 10px;  /* Optional: adds space between each list item */
+}
+header {
+    background-color: #c0392b;
+    color: white;
+    padding:10px 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #e74c3c;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none !important;
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: none !important;
+}
+
+section {
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+
+.button {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+padding: 20px 40px;
+}
+
+.red { background-color: #A61B1B; }  /* Register */
+.blue { background-color: #2874A6; }  /*Login */
+.yellow { background-color: #F4B400; } /* Find a Blood donor section */
+.bright-red { background-color: #E74C3C; } /* About */
+
+/* Optional: Styling the scrollbar */
+::-webkit-scrollbar {
+    width: 12px;  /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Light background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;  /* Darker color for the scrollbar thumb */
+    border-radius: 10px; /* Rounded edges for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Darker color on hover */
+}

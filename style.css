@@ -1,0 +1,88 @@
+/* Body and Background Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://images.fineartamerica.com/images-medium-large-5/1-red-blood-cells-in-isotonic-solution-dennis-kunkel-microscopyscience-photo-library.jpg'); /* Blood cells background */
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  overflow-y: scroll;
+}
+
+/* Header Styling */
+header {
+  background-color: rgba(217, 83, 79, 0.8); /* Transparent Red */
+  color: white;
+  padding: 1em 0;
+  text-align: center;
+}
+
+/* Navigation Styling */
+nav {
+  background-color: rgba(181, 43, 39, 0.9);
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main and Section Styling */
+main {
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+  border-radius: 8px;
+  margin: 2em auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+/* Form Input Styling */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #d9534f;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c9302c;
+}
+
+/* Footer Styling */
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
+}
