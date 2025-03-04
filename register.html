@@ -47,7 +47,13 @@
 
     // Combined validation function
     function validateForm() {
-      return validatePhoneNumber() && validatePassword();
+      // If both phone number and password validations pass, redirect to success page
+      if (validatePhoneNumber() && validatePassword()) {
+        // Redirect to the success page
+        window.location.href = "success.html";
+        return false; // Prevent form submission
+      }
+      return false;
     }
   </script>
 </head>
