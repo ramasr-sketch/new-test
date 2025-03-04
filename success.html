@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Success</title>
+  <style>
+    /* Overall Page Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #6f42c1, #4e73df);
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Fade In Animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Container for the Message */
+    .message-container {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      transform: scale(0.9);
+      animation: scaleIn 0.8s ease-out forwards;
+    }
+
+    /* Animation for the Container */
+    @keyframes scaleIn {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Main Heading */
+    h2 {
+      color: #28a745;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 2px;
+      animation: textColorChange 3s infinite alternate;
+    }
+
+    /* Text Color Change Animation */
+    @keyframes textColorChange {
+      0% {
+        color: #28a745;
+      }
+      100% {
+        color: #fff;
+      }
+    }
+
+    /* Paragraph Styling */
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 20px 0;
+      animation: slideUp 1s ease-out;
+    }
+
+    /* Slide-Up Animation for Paragraph */
+    @keyframes slideUp {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Button Styling */
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    /* Button Hover Effect */
+    button:hover {
+      background-color: #218838;
+      transform: translateY(-3px);
+    }
+
+    /* Button Focus Effect */
+    button:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(41, 167, 69, 0.8);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .message-container {
+        padding: 30px;
+        width: 85%;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <h2>Registration Successful!</h2>
+    <p>Thank you for registering as a donor. You will be contacted shortly.</p>
+    <p><a href="login.html"><button>Login</button></a></p>
+  </div>
+</body>
+</html>
