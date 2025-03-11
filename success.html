@@ -3,150 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Success</title>
-  <style>
-    /* Overall Page Styling */
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #6f42c1, #4e73df);
-      color: #fff;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      animation: fadeIn 1s ease-in-out;
-    }
+  <title>Blood Donation Website</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // JavaScript validation for contact number (exactly 10 digits)
+    function validatePhoneNumber() {
+      var contact = document.getElementById("contact").value;
+      var contactError = document.getElementById("contact-error");
 
-    /* Fade In Animation */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Container for the Message */
-    .message-container {
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 10px;
-      padding: 40px;
-      max-width: 600px;
-      width: 90%;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-      transform: scale(0.9);
-      animation: scaleIn 0.8s ease-out forwards;
-    }
-
-    /* Animation for the Container */
-    @keyframes scaleIn {
-      0% {
-        transform: scale(0.9);
-        opacity: 0;
-      }
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    /* Main Heading */
-    h2 {
-      color: #28a745;
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      font-weight: bold;
-      letter-spacing: 2px;
-      animation: textColorChange 3s infinite alternate;
-    }
-
-    /* Text Color Change Animation */
-    @keyframes textColorChange {
-      0% {
-        color: #28a745;
-      }
-      100% {
-        color: #fff;
-      }
-    }
-
-    /* Paragraph Styling */
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      margin: 20px 0;
-      animation: slideUp 1s ease-out;
-    }
-
-    /* Slide-Up Animation for Paragraph */
-    @keyframes slideUp {
-      0% {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    /* Button Styling */
-    button {
-      background-color: #28a745;
-      color: white;
-      padding: 15px 25px;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      text-transform: uppercase;
-      font-weight: bold;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    /* Button Hover Effect */
-    button:hover {
-      background-color: #218838;
-      transform: translateY(-3px);
-    }
-
-    /* Button Focus Effect */
-    button:focus {
-      outline: none;
-      box-shadow: 0 0 10px rgba(41, 167, 69, 0.8);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .message-container {
-        padding: 30px;
-        width: 85%;
+      // Check if the phone number is exactly 10 digits long and is numeric
+      if (contact.length !== 10 || isNaN(contact)) {
+        contactError.textContent = "Phone number should be exactly 10 digits.";
+        contactError.style.display = "block"; // Show the error message
+        return false;
+      } else {
+        contactError.textContent = ""; // Clear the error message
+        contactError.style.display = "none"; // Hide the error message
       }
 
-      h2 {
-        font-size: 2rem;
+      return true;
+    }
+
+    // JavaScript validation for password (minimum 8 characters and at least one special symbol)
+    function validatePassword() {
+      var password = document.getElementById("password").value;
+      var passwordError = document.getElementById("password-error");
+
+      // Regular expression to check if password contains at least one special character
+      var specialCharacterRegex = /[!@#$%^&*(),.?":{}|<>]/;
+
+      // Check if password length is less than 8 or doesn't contain a special symbol
+      if (password.length < 8 || !specialCharacterRegex.test(password)) {
+        passwordError.textContent = "Password must be at least 8 characters long and contain a special symbol.";
+        passwordError.style.display = "block"; // Show the error message
+        return false;
+      } else {
+        passwordError.textContent = ""; // Clear the error message
+        passwordError.style.display = "none"; // Hide the error message
       }
 
-      p {
-        font-size: 1rem;
-      }
+      return true;
     }
-  </style>
+
+    // Combined validation function
+    function validateForm() {
+      // If both phone number and password validations pass, redirect to success page
+      if (validatePhoneNumber() && validatePassword()) {
+        // Redirect to the success page
+        window.location.href = "success.html";
+        return false; // Prevent form submission
+      }
+      return false;
+    }
+  </script>
 </head>
 <body>
-  <div class="message-container">
-    <h2>Registration Successful!</h2>
-    <p>Thank you for registering as a donor. You will be contacted shortly.</p>
-    <p><a href="login.html"><button>Login</button></a></p>
-  </div>
+  <header>
+    <h1>Blood Donation Website</h1>
+    <p>Saving lives through your generous blood donations</p>
+  </header>
+
+  <nav>
+    <a href="#register">Register as a Donor</a>
+  </nav>
+
+  <main>
+    <!-- Register as a Donor Section -->
+    <section id="register">
+      <h2>Register as a Donor</h2>
+      <form action="#" method="POST" onsubmit="return validateForm()">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="blood-group">Blood Group:</label>
+        <select id="blood-group" name="bloodgroup" required>
+          <option value="">Select Blood Group</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" placeholder="City/State" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" placeholder="1234567890" required>
+        <span id="contact-error" style="color: red; display: none;"></span><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span id="password-error" style="color: red; display: none;"></span><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="diseases">Please mention if you have any diseases or else fill N/A:</label><br>
+        <textarea id="diseases" name="diseases" rows="4" cols="30"></textarea><br><br>
+
+        <button type="submit" name="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blood Donation Website. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
